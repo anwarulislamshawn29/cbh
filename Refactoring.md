@@ -16,6 +16,7 @@ Solution:
 
 I have written the following tests using jest framework. These tests will ensure that the existing functionality of the code is not broken after refactoring, and that any new changes made to the code in the future will be more likely to not break existing functionality.
 
+```
 const crypto = require("crypto");
 
 describe("deterministicPartitionKey", () => {
@@ -43,7 +44,7 @@ describe("deterministicPartitionKey", () => {
    expect(deterministicPartitionKey(event)).toBe("0");
  });
 });
-
+```
 I added 4 tests for the existing functionality of the function:
 
 1# If the partitionKey exists in the event object, it should return the partitionKey.
@@ -53,6 +54,7 @@ I added 4 tests for the existing functionality of the function:
 
 2. Refactor the function to be as "clean" and "readable" as possible. There are many valid ways to define those words - use your own personal definitions, but be prepared to defend them. Note that we do like to use the latest JS language features when applicable.
 
+```
 const crypto = require("crypto");
 
 exports.deterministicPartitionKey = (event) => {
@@ -75,6 +77,7 @@ exports.deterministicPartitionKey = (event) => {
  }
  return partitionKey;
 };
+```
 
 3. Write up a brief (~1 paragraph) explanation of why you made the choices you did and why specifically your version is more "readable" than the original.
 
